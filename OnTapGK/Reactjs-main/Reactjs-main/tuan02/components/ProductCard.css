@@ -1,0 +1,27 @@
+.card{
+    border-radius: 10px;
+    height: 80%; 
+    min-height: 300px; 
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(124, 17, 17, 0.185);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px 0 rgb(245, 7, 7), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+.productImage{
+    width: 35%;
+    
+    
+}
+h2,p{
+    margin: 10px 0;
+}

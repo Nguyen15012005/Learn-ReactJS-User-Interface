@@ -1,0 +1,48 @@
+.ref-container {
+  width: 360px;
+  margin: 120px auto;
+  padding: 35px;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.ref-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #5a3b00;
+  font-weight: 500;
+}
+
+.ref-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #f0b400;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.ref-input:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
+}
+
+.ref-btn {
+  padding: 12px 26px;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ff8c00;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ref-btn:hover {
+  background-color: #e67e00;
+  transform: scale(1.05);
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+    <title>Part1_Coding_Challenge_4</title>
+  </head>
+  <body>
+    <!-- 
+    Steven muốn xây dựng một máy tính tiền boa đơn giản để sử dụng mỗi khi đi ăn ở nhà hàng. 
+    Ở nước anh ấy, thông thường người ta sẽ boa 15% nếu giá trị hóa đơn nằm trong khoảng từ 50 đến 300. 
+    Nếu giá trị khác, tiền boa là 20% 
+    
+    Nhiệm vụ của bạn:
+
+      1. Tính tiền boa dựa trên giá trị hóa đơn. Tạo một biến có tên là 'tip' để lưu trữ số tiền này. 
+      Không được phép sử dụng câu lệnh if/else (Nếu thấy dễ hơn, bạn có thể bắt đầu bằng câu lệnh if/else, 
+      sau đó thử chuyển đổi nó thành toán tử ba ngôi!).
+
+      2. In ra màn hình console một chuỗi chứa giá trị hóa đơn, tiền boa và tổng giá trị (hóa đơn + tiền boa).
+      Ví dụ: “Hóa đơn là 275, tiền boa là 41.25, và tổng giá trị là 316.25”
+
+      Dữ liệu thử nghiệm:
+      § Dữ liệu 1: Kiểm tra giá trị hóa đơn 275, 40 và 430
+      Gợi ý:
+        § Để tính 20% của một giá trị, chỉ cần nhân giá trị đó với 20/100 = 0,2
+        § Giá trị X nằm giữa 50 và 300, nếu nó >= 50 và <= 300
+    -->
+    <script>
+      const bills = [275, 40, 430];
+
+      const calcTip = (bill) =>
+        bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+      bills.forEach((bill, index) => {
+        const tip = calcTip(bill);
+        const total = bill + tip;
+
+        console.log(`Test Bill ${index + 1}`);
+        console.log(`Hóa đơn là: ${bill}`);
+        console.log(`Tiền boa là: ${tip}`);
+        console.log(`Tổng giá trị là: ${total}`);
+        console.log("------------------");
+      });
+    </script>
+  </body>
+</html>

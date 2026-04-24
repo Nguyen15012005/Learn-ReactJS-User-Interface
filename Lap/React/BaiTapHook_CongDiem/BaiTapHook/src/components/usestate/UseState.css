@@ -1,0 +1,31 @@
+.counter-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.counter-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.counter-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  background-color: #ffffff;
+  color: #764ba2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counter-btn:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Betting Challenge #3</title>
+</head>
+<body>
+
+    <h2>Football Betting - Part 3 (Maps & Sets)</h2>
+    <button id="btn">Cal Game Events</button>
+
+    <script>
+        const gameEvents = new Map([
+            [17, '⚽ GOAL'],
+            [36, '🔁 Substitution'],
+            [47, '⚽ GOAL'],
+            [61, '🔁 Substitution'],
+            [64, '🔶 Yellow card'],
+            [69, '🔴 Red card'],
+            [70, '🔁 Substitution'],
+            [72, '🔁 Substitution'],
+            [76, '⚽ GOAL'],
+            [80, '⚽ GOAL'],
+            [92, '🔶 Yellow card'],
+        ]);
+
+        btn.onclick = () => {
+            const events = [...new Set(gameEvents.values())];
+            console.log('--- Task 1: Unique Events ---');
+            console.log(events);
+
+            gameEvents.delete(64);
+            console.log('--- Task 2: Remove Event at 64 min ---');
+            console.log('Event at 64 removed.');
+
+            console.log('--- Task 3: Average Event Frequency ---');
+            const time = [...gameEvents.keys()].pop();
+            console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
+            console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+
+            console.log('--- Task 4: Log Events with Halves ---');
+            for (const [min, event] of gameEvents) {
+                const half = min <= 45 ? 'FIRST HALF' : 'SECOND HALF';
+                console.log(`[${half}] ${min}: ${event}`);
+            }
+        }
+    </script>
+    
+</body>
+</html>

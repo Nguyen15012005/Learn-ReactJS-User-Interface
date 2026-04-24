@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Avg = (a, b, c) => (a + b + c) / 3;
+
+        const dolphinsAvg1 = Avg(96, 108, 89);
+        const koalasAvg1 = Avg(88, 91, 110);
+
+        console.log(dolphinsAvg1, koalasAvg1);
+        if (dolphinsAvg1 > 100 || koalasAvg1 > 100) {
+            if (dolphinsAvg1 > koalasAvg1) {
+                console.log("Dolphins win the trophy");
+            } else if (koalasAvg1 > dolphinsAvg1) {
+                console.log("Koalas win the trophy");
+            } else {
+                console.log("It's a draw");
+            }
+        }
+        else{
+            console.log("No one")
+        }
+
+
+    </script>
+</body>
+
+</html>

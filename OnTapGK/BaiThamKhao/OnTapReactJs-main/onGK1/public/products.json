@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Iphone 15", "category": "phone", "price": 1200 },
+  { "id": 2, "name": "Samsung S23", "category": "phone", "price": 1000 },
+  { "id": 3, "name": "Macbook Pro", "category": "laptop", "price": 2000 },
+  { "id": 4, "name": "Dell XPS", "category": "laptop", "price": 1800 }
+]

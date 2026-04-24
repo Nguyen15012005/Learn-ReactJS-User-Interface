@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamelCase Converter - Final</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 50px;
+            background-color: #333;
+        }
+        textarea {
+            width: 300px;
+            height: 150px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="color: white;">Underscore to CamelCase</h2>
+
+    <script>
+
+        document.body.append(document.createElement('textarea'));
+        document.body.append(document.createElement('button'));
+
+        const btn = document.querySelector('button');
+        const textArea = document.querySelector('textarea');
+        btn.textContent = 'Convert';
+
+        btn.onclick = () => {
+            const text = textArea.value;
+            const rows = text.split('\n');
+            for (const [i, row] of rows.entries()) {
+                if (!row.trim()) continue;
+                const parts = row.toLowerCase().trim().split('_');
+                if (parts.length < 2) {
+                    console.log(`${row.trim().padEnd(20)} ❌ (No underscore)`);
+                    continue;
+                }
+
+                const [first, second] = parts;
+                const output = `${first}${second.replace(
+                    second[0],
+                    second[0].toUpperCase()
+                )}`;
+                console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+            }
+        };
+
+        /* Dữ liệu test để dán vào:
+        underscore_case
+        first_name
+        Some_Variable
+        calculate_AGE
+        delayed_departure
+        */
+    </script>
+</body>
+</html>

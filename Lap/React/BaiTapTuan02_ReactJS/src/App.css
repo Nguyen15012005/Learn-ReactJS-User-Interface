@@ -1,0 +1,48 @@
+#app {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.lap02 {
+  background-color: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.panda {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+#icon-panda {
+  width: 200px;
+  height: 200px;
+}
+
+.lap03 {
+  width: 100%;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.lap04 {
+  margin-top: 300px;
+}
+
+.title{
+  margin-bottom: 20px;
+}

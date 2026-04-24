@@ -1,0 +1,65 @@
+.app-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+}
+
+.filter-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.inputSearch {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputSearch > label {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.filter-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.product-list {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-item:hover {
+  background: #f1f1f1;
+}

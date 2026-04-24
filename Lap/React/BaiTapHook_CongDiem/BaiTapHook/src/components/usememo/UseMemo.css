@@ -1,0 +1,38 @@
+.memo-container {
+  width: 340px;
+  margin: 120px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+}
+
+.memo-title {
+  font-size: 22px;
+  color: #4a2c2a;
+  margin-bottom: 20px;
+}
+
+.memo-total {
+  font-size: 36px;
+  font-weight: bold;
+  color: #7a1f1f;
+  margin-bottom: 25px;
+}
+
+.memo-btn {
+  padding: 12px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #7a1f1f;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.memo-btn:hover {
+  background-color: #5a1414;
+  transform: translateY(-2px) scale(1.05);
+}

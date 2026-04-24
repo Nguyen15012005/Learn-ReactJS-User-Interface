@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+
+    <title>Part 2 Coding Challenge 3</title>
+  </head>
+  <body>
+    <!-- 
+Hãy quay lại với việc Mark và John so sánh chỉ số BMI của họ! Lần này, 
+chúng ta hãy sử dụng các đối tượng để thực hiện các phép tính! Nhớ nhé: 
+BMI = khối lượng / chiều cao ** 2 = khối lượng / (chiều cao * chiều cao) 
+(khối lượng tính bằng kg và chiều cao tính bằng mét)
+
+Nhiệm vụ của bạn:
+1. Với mỗi người trong số họ, hãy tạo một đối tượng với các thuộc tính bao gồm tên đầy đủ, 
+khối lượng và chiều cao (Mark Miller và John Smith)
+2. Tạo một phương thức 'calcBMI' trên mỗi đối tượng để tính chỉ số BMI (cùng một phương thức trên
+cả hai đối tượng). Lưu giá trị BMI vào một thuộc tính và cũng trả về giá trị đó từ phương thức.
+3. Ghi vào bảng điều khiển người có chỉ số BMI cao hơn, cùng với tên đầy đủ và chỉ số BMI tương ứng.
+Ví dụ: "Chỉ số BMI của John (28,3) cao hơn chỉ số BMI của Mark (23,9)!"
+Dữ liệu thử nghiệm: Marks nặng 78 kg và cao 1,69 m. John nặng 92 kg và cao 1,95 m.
+    -->
+
+    <script>
+      const mark = {
+        fullName: "Mark Miller",
+        mass: 78,
+        height: 1.69,
+        calcBMI: function () {
+          this.BMI = this.mass / (this.height * this.height);
+          return this.BMI;
+        },
+      };
+
+      const john = {
+        fullName: "John Smith",
+        mass: 92,
+        height: 1.95,
+        calcBMI: function () {
+          this.BMI = this.mass / (this.height * this.height);
+          return this.BMI;
+        },
+      };
+
+      mark.calcBMI();
+      john.calcBMI();
+
+      console.log(`Chỉ số BMI của ${mark.fullName}: ${mark.BMI.toFixed(2)}`);
+      console.log(`Chỉ số BMI của ${john.fullName}: ${john.BMI.toFixed(2)}`);
+
+      const compareBMI = () => {
+        if (mark.BMI > john.BMI) {
+          console.log(
+            `${mark.fullName}'s BMI (${mark.BMI.toFixed(2)}) cao hơn ${
+              john.fullName
+            }'s BMI (${john.BMI.toFixed(2)})`
+          );
+        } else {
+          console.log(
+            `${john.fullName}'s BMI (${john.BMI.toFixed(2)}) cao hơn ${
+              mark.fullName
+            }'s BMI (${mark.BMI.toFixed(2)})`
+          );
+        }
+      };
+      compareBMI();
+    </script>
+  </body>
+</html>

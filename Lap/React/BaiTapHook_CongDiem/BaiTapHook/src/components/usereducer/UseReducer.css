@@ -1,0 +1,46 @@
+.reducer-container {
+  width: 320px;
+  margin: 120px auto;
+  padding: 35px;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.reducer-title {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.reducer-count {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.reducer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reducer-btn {
+  width: 55px;
+  height: 55px;
+  font-size: 26px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #0072ff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.reducer-btn:hover {
+  transform: scale(1.1);
+  background-color: #e6f0ff;
+}

@@ -1,0 +1,25 @@
+Build a `SearchResultsPage` React component with Tailwind CSS.
+
+PAGE LAYOUT: 2-column (sidebar 240px fixed + main content flex-1)
+
+LEFT SIDEBAR:
+  - "≡ FILTERS" header with icon
+  - Section "Type" with checkboxes grid 2-col: Pan-fried, Stir-fried, Grilled (checked pink), Roasted (checked pink), Sautéed, Baked, Steamed, Stewed
+  - Section "Time" with a dual-handle range slider (30min to 60min), show values above handles
+  - Section "Rating" with 5 rows of star ratings (5★ to 1★), each row has a checkbox + star visuals
+  - "Apply" button: full-width bg-pink-500 text-white rounded-full py-3 mt-4
+
+MAIN CONTENT (two states via prop `hasResults`):
+  WHEN hasResults=true:
+    - Header: "Salad (32)" text-2xl font-bold + A-Z sort dropdown on right
+    - 3-column grid of RecipeCards (image, title, time, bookmark icon)
+    - Pagination: prev/next arrows + page numbers + "..." ellipsis
+  
+  WHEN hasResults=false:
+    - Bold text: 'Sorry, no results were found for "{query}"'
+    - Illustration: box with magnifying glass and X (SVG icon, ~120px, pink tones)
+    - Text: "We have all your Independence Day sweets covered."
+    - Suggestion pill tags: "Sweet Cake" | "Black Cake" | "Panzle Verde" | "Healthy food" (pink border, rounded-full)
+
+PROPS: query (string), hasResults (bool), results (array)
+TECH: React + Tailwind

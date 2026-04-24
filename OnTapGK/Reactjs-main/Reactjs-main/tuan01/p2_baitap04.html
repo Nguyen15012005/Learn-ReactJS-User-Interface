@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator Challenge #4</title>
+</head>
+<body>
+
+    <h2>Tip Calculator (Loops Edition)</h2>
+    <button id="btn">Cal</button>
+
+    <script>
+        btn.onclick = () => {
+            const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+            const tips = [];
+            const totals = [];
+
+            const calcTip = (bill) => {
+                return (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+            }
+
+            for (let i = 0; i < bills.length; i++) {
+                const tip = calcTip(bills[i]);
+                tips.push(tip);
+                totals.push(tip + bills[i]);
+            }
+
+            console.log("Bills: ", bills);
+            console.log("Tips:  ", tips);
+            console.log("Totals:", totals);
+
+            const calcAverage = (arr) => {
+                let sum = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    sum += arr[i];
+                }
+                return sum / arr.length;
+            }
+
+            const averageTotal = calcAverage(totals);
+            console.log(`Average Total: ${averageTotal.toFixed(2)}`);
+        }
+    </script>
+    
+</body>
+</html>

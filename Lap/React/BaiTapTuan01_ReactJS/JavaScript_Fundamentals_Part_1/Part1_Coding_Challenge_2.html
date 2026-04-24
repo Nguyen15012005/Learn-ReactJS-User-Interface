@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+    <title>Part 1 Coding Challenge 2</title>
+  </head>
+  <body>
+    <!-- 
+    ####Code Challenges 01####
+    Hãy sử dụng ví dụ về BMI từ Thử thách số 1 và đoạn mã bạn đã viết, rồi cải tiến nó.
+    Nhiệm vụ của bạn:
+    1. In ra màn hình console một thông báo rõ ràng cho biết ai có chỉ số BMI cao hơn. 
+    Thông báo có thể là "Chỉ số BMI của Mark cao hơn chỉ số BMI của John!" 
+    hoặc "Chỉ số BMI của John cao hơn chỉ số BMI của Mark!".
+    2. Sử dụng chuỗi ký tự mẫu để bao gồm các giá trị BMI trong kết quả đầu ra. 
+    Ví dụ: "Mark'sBMI (28,3) cao hơn BMI của John (23,9)!
+    Gợi ý: Sử dụng câu lệnh if/else
+
+
+    -->
+    <script>
+      const calcBMI = (mass, height) => mass / (height * height);
+
+      const compareBMI = (
+        markMass,
+        markHeight,
+        johnMass,
+        johnHeight,
+        label
+      ) => {
+        console.log(`-----${label}-----`);
+
+        const markBMI = calcBMI(markMass, markHeight);
+        const johnBMI = calcBMI(johnMass, johnHeight);
+
+        console.log(`Chỉ số BMI của Mark: ${markBMI.toFixed(2)}`);
+        console.log(`Chỉ số BMI của John: ${johnBMI.toFixed(2)}`);
+
+        if (markBMI > johnBMI) {
+          console.log("Chỉ số BMI của Mark cao hơn chỉ số BMI của John!");
+          console.log(
+            `Mark's BMI (${markBMI.toFixed(
+              2
+            )}) cao hơn John's BMI (${johnBMI.toFixed(2)})`
+          );
+        } else {
+          console.log("Chỉ số BMI của John cao hơn chỉ số BMI của Mark!");
+          console.log(
+            `John's BMI (${johnBMI.toFixed(
+              2
+            )}) cao hơn Mark's BMI (${markBMI.toFixed(2)})`
+          );
+        }
+      };
+
+      compareBMI(78, 1.69, 92, 1.95, "Test dữ liệu 1");
+      compareBMI(95, 1.88, 85, 1.76, "Test dữ liệu 2");
+    </script>
+  </body>
+</html>

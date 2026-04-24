@@ -1,0 +1,7 @@
+[
+  { "id": 1, "userId": 1, "title": "Học React cơ bản", "category": "Frontend" },
+  { "id": 2, "userId": 1, "title": "Học Vue.js", "category": "Frontend" },
+  { "id": 3, "userId": 2, "title": "Node.js cho người mới", "category": "Backend" },
+  { "id": 4, "userId": 2, "title": "Cấu trúc dữ liệu và giải thuật", "category": "Backend" },
+  { "id": 5, "userId": 3, "title": "Thiết kế UI/UX với Figma", "category": "Design" }
+]

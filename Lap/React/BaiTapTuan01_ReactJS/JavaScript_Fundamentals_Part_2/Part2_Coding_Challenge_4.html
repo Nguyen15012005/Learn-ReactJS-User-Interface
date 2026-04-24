@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+
+    <title>Part 2 Coding Challenge 4</title>
+  </head>
+  <body>
+    <!--
+    Hãy cải thiện máy tính tiền tip của Steven hơn nữa, lần này bằng cách dùng vòng lặp (loops)!
+    Nhiệm vụ của bạn:
+        Tạo một mảng bills chứa tất cả 10 giá trị hóa đơn trong dữ liệu test.
+        Tạo các mảng rỗng cho tiền tip và tổng tiền (tips và totals).
+        Sử dụng hàm calcTip mà bạn đã viết trước đó để lặp lại việc tính tiền tip và tổng tiền (bill + tip) 
+        cho mỗi giá trị trong mảng bills.
+        Sử dụng vòng lặp for để thực hiện 10 phép tính.
+        Dùng phương thức push() để thêm giá trị vào mảng tips và totals.
+    Dữ liệu test:
+        22, 295, 176, 440, 37, 105, 10, 1100, 86, 52
+    Gợi ý:
+        Gọi hàm calcTip trong vòng lặp và dùng phương thức push để thêm giá trị vào mảng tips và totals.
+    BONUS (Nâng cao):
+        4.Viết hàm calcAverage nhận vào một mảng arr làm tham số.
+        Hàm này sẽ tính giá trị trung bình của tất cả các số trong mảng.
+        Đây là phần hơi khó (vì bạn chưa học), nên làm theo các bước sau:
+        4.1.Đầu tiên, bạn cần cộng tất cả các giá trị trong mảng.
+        Để làm điều đó:
+            Tạo biến sum bắt đầu từ 0
+            Lặp qua mảng bằng vòng lặp for
+            Mỗi lần lặp, cộng phần tử hiện tại vào sum
+            Kết thúc vòng lặp, bạn sẽ có tổng tất cả các giá trị.
+        4.2.Để tính trung bình:
+            Trung bình = tổng / số phần tử trong mảng (arr.length)
+        4.3.Gọi hàm calcAverage với mảng totals.
+    -->
+    <script>
+      let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+      let tips = [];
+      let totals = [];
+
+      const calcTip = (bill) =>
+        bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+      for (let i = 0; i < bills.length; i++) {
+        let tip = calcTip(bills[i]);
+        tips.push(tip);
+        let total = tip + bills[i];
+        totals.push(total);
+      }
+      console.log(`Danh sách Tips: ${tips}`);
+      console.log(`Danh sách Totals: ${totals}`);
+
+      const calcAverage = (arr) => {
+        let sum = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          sum += arr[i];
+        }
+
+        const avg = sum / arr.length;
+        return avg;
+      };
+
+      console.log(`Trung bình tổng số tiền là: ${calcAverage(totals)}`);
+    </script>
+  </body>
+</html>

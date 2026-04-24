@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "name": "Tập thể dục",
+    "description": "Chạy bộ 30 phút ở công viên gần nhà để nâng cao sức khỏe.",
+    "status": "completed",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "2",
+    "name": "Đọc sách",
+    "description": "Đọc hoàn thành chương 3 của cuốn sách đang đọc dở.",
+    "status": "in_progress",
+    "dueDate": "2026-03-15"
+  },
+  {
+    "id": "3",
+    "name": "Đi siêu thị",
+    "description": "Mua thực phẩm, rau củ và trái cây cho các bữa ăn trong tuần.",
+    "status": "pending",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "4",
+    "name": "Kiểm tra email",
+    "description": "Phản hồi các email công việc và dọn dẹp hòm thư đến.",
+    "status": "completed",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "5",
+    "name": "Họp nhóm dự án",
+    "description": "Tham gia buổi họp định kỳ lúc 10h sáng để cập nhật tiến độ.",
+    "status": "completed",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "6",
+    "name": "Nấu bữa trưa",
+    "description": "Chuẩn bị bữa trưa với đầy đủ dinh dưỡng cho gia đình.",
+    "status": "pending",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "7",
+    "name": "Học lập trình",
+    "description": "Hoàn thành bài tập thực hành JavaScript trên nền tảng học trực tuyến.",
+    "status": "in_progress",
+    "dueDate": "2026-03-16"
+  },
+  {
+    "id": "8",
+    "name": "Dọn dẹp nhà cửa",
+    "description": "Quét nhà, lau sàn, sắp xếp lại đồ đạc và đổ rác.",
+    "status": "pending",
+    "dueDate": "2026-03-15"
+  },
+  {
+    "id": "9",
+    "name": "Gọi điện cho gia đình",
+    "description": "Dành 15 phút gọi điện hỏi thăm sức khỏe bố mẹ.",
+    "status": "pending",
+    "dueDate": "2026-03-15"
+  },
+  {
+    "id": "10",
+    "name": "Tưới cây",
+    "description": "Tưới nước và bón phân cho các chậu cây ngoài ban công.",
+    "status": "completed",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "11",
+    "name": "Lên kế hoạch tuần",
+    "description": "Ghi chú và sắp xếp các công việc quan trọng cần làm cho tuần sau.",
+    "status": "pending",
+    "dueDate": "2026-03-15"
+  },
+  {
+    "id": "12",
+    "name": "Giặt quần áo",
+    "description": "Phân loại quần áo màu và quần áo trắng để cho vào máy giặt.",
+    "status": "pending",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "13",
+    "name": "Gặp gỡ đối tác",
+    "description": "Cafe trao đổi về bản hợp đồng mới với khách hàng lúc 2h chiều.",
+    "status": "in_progress",
+    "dueDate": "2026-03-17"
+  },
+  {
+    "id": "14",
+    "name": "Thiền định",
+    "description": "Ngồi thiền 15 phút để thư giãn tinh thần sau giờ làm việc.",
+    "status": "pending",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "15",
+    "name": "Học ngoại ngữ",
+    "description": "Ôn tập và ghi nhớ 20 từ vựng tiếng Anh chuyên ngành mới.",
+    "status": "pending",
+    "dueDate": "2026-03-18"
+  },
+  {
+    "id": "16",
+    "name": "Thanh toán hóa đơn",
+    "description": "Thanh toán các hóa đơn điện, nước, và internet của tháng này.",
+    "status": "pending",
+    "dueDate": "2026-03-20"
+  },
+  {
+    "id": "17",
+    "name": "Chăm sóc thú cưng",
+    "description": "Cho mèo ăn, chải lông và dọn dẹp khay vệ sinh.",
+    "status": "completed",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "18",
+    "name": "Làm báo cáo",
+    "description": "Tổng hợp số liệu và hoàn thành báo cáo doanh thu tháng.",
+    "status": "in_progress",
+    "dueDate": "2026-03-25"
+  },
+  {
+    "id": "19",
+    "name": "Xem phim",
+    "description": "Giải trí bằng cách xem một tập phim tài liệu trên Netflix.",
+    "status": "pending",
+    "dueDate": "2026-03-14"
+  },
+  {
+    "id": "20",
+    "name": "Đi ngủ sớm",
+    "description": "Tắt toàn bộ thiết bị điện tử và lên giường trước 10h30 tối.",
+    "status": "pending",
+    "dueDate": "2026-03-14"
+  }
+]

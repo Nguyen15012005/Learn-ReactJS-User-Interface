@@ -1,0 +1,20 @@
+Build a `Navbar` React component with Tailwind CSS matching the Chefify website header.
+
+LAYOUT: sticky top-0 bg-white border-b border-gray-100 shadow-sm z-50, h-16, px-6, flex items-center justify-between
+
+LEFT: 
+  - Logo: pink chef-hat icon (SVG) + "Chefify" text in bold pink text-xl
+  
+CENTER-LEFT:
+  - Search input: bg-gray-100 rounded-full px-4 py-2 w-64, with search icon left, placeholder "What would you like to cook?"
+
+CENTER-RIGHT nav links (hidden on mobile, text-gray-600 text-sm gap-6):
+  - "What to cook" | "Recipes" | "Ingredients" | "Occasions" | "About Us"
+
+RIGHT:
+  - If logged out: "Login" button (border border-pink-500 text-pink-500 rounded-full px-4 py-2) + "Subscribe" button (bg-pink-500 text-white rounded-full px-4 py-2)
+  - If logged in: show "📋 Your Recipe Box" with bookmark icon + user avatar (circle, 32px)
+
+PROPS: isLoggedIn (bool), onLoginClick, onSubscribeClick
+STATE: control search input value
+TECH: React + Tailwind

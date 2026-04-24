@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Number - Reset</title>
+    <style>
+        body { background-color: #222; color: #eee; font-family: sans-serif; }
+        .number { background: #eee; color: #333; width: 15rem; padding: 3rem; margin: 20px auto; text-align: center; font-size: 6rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Guess My Number!</h1>
+        <button class="again">Again!</button>
+        <div class="number">?</div>
+    </header>
+
+    <main>
+        <p class="message">Start guessing...</p>
+        <p>Score: <span class="score">20</span></p>
+        <input type="number" class="guess" />
+    </main>
+
+    <script>
+        let score = 20;
+        let secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+        document.querySelector('.again').addEventListener('click', function () {
+            
+            score = 20;
+            secretNumber = Math.trunc(Math.random() * 20) + 1;
+
+            document.querySelector('.message').textContent = 'Start guessing...';
+            document.querySelector('.score').textContent = score;
+            document.querySelector('.number').textContent = '?';
+            document.querySelector('.guess').value = '';
+            
+            document.querySelector('body').style.backgroundColor = '#222';
+            document.querySelector('.number').style.width = '15rem';
+
+            console.log('Game has been reset!');
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="bill" type="text">
+    <button id="click">click</button>
+    <script>
+        let btn = document.getElementById('click');
+        btn.onclick = function () {
+            let bill = parseFloat(document.getElementById('bill').value);
+            let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+            let total = bill + tip;
+            console.log(`Tien bill: ${bill}, Tien tip: ${tip}, Tong hoa don: ${total}`);
+        };
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+
+    <title>Part 1 Coding Challenge 1</title>
+  </head>
+  <body>
+    <!-- \
+  ####Code Challenges 01####
+  Mark và John đang cố gắng so sánh chỉ số BMI (Chỉ số khối cơ thể) của họ, được tính bằng công thức:
+  BMI = khối lượng / chiều cao ** 2 = khối lượng / (chiều cao * chiều cao) 
+  (khối lượng tính bằng kg và chiều cao tính bằng mét).
+  Nhiệm vụ của bạn:
+  1. Lưu trữ khối lượng và chiều cao của Mark và John vào các biến.
+  2. Tính chỉ số BMI của cả hai người bằng công thức (bạn thậm chí có thể áp dụng cả hai cách trên).
+  3. Tạo một biến kiểu Boolean 'markHigherBMI' chứa thông tin về liệu chỉ số BMI của Mark có cao hơn John không?
+ 
+  Dữ liệu 1: Marks nặng 78 kg và cao 1,69 m. John nặng 92 kg và cao 1,95 m.
+  Dữ liệu 2: Mark nặng 95 kg và cao 1,88 m. John nặng 85 kg và cao 1,76 m.
+  CHÚC MAY MẮN
+  Liệu chỉ số BMI của Mark có cao hơn John không?
+  -->
+    <script>
+      const calcBMI = (mass, height) => mass / (height * height);
+
+      const checkBMI = (markMass, markHeight, johnMass, johnHeight, label) => {
+        console.log(`-----${label}-----`);
+
+        const markBMI = calcBMI(markMass, markHeight);
+        const johnBMI = calcBMI(johnMass, johnHeight);
+
+        console.log("BMI của Mark:", markBMI.toFixed(2));
+        console.log("BMI của John:", johnBMI.toFixed(2));
+
+        const markHigherBMI = markBMI > johnBMI;
+        console.log("BMI của Mark cao hơn John không?", markHigherBMI);
+
+        if (markHigherBMI)
+          console.log("Đúng rồi, BMI của Mark cao hơn BMI của John");
+        else console.log("Không, BMI của Mark thấp hơn BMI của John");
+      };
+
+      checkBMI(78, 1.69, 92, 1.95, "Test dữ liệu 1");
+      checkBMI(95, 1.88, 85, 1.76, "Test dữ liệu 2");
+    </script>
+  </body>
+</html>

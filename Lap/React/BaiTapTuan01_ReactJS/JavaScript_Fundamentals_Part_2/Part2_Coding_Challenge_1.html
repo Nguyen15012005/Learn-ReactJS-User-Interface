@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+    <title>Part 2 Coding Challenge 1</title>
+  </head>
+
+  <body>
+    <script>
+      const calcAverage = (scores) => scores.reduce((sum, s) => sum + s, 0) / scores.length;
+
+      const checkWinner = (avgDolphins, avgKoalas) => {
+        if (avgDolphins >= 2 * avgKoalas) {
+          console.log(
+            `Đội Dolphins win (${avgDolphins.toFixed(2)} điểm so với ${avgKoalas.toFixed(
+              2
+            )} điểm)`
+          );
+        } else if (avgKoalas >= 2 * avgDolphins) {
+          console.log(
+            `Đội Koalas win (${avgKoalas.toFixed(2)} điểm so với ${avgDolphins.toFixed(
+              2
+            )} điểm)`
+          );
+        } else {
+          console.log("Không đội nào win :((");
+        }
+      };
+
+      const runTest = (label, dolphinsScores, koalasScores) => {
+        console.log(label);
+
+        const avgDolphins = calcAverage(dolphinsScores);
+        const avgKoalas = calcAverage(koalasScores);
+
+        console.log(`Điểm TB Dolphins: ${avgDolphins.toFixed(2)} điểm`);
+        console.log(`Điểm TB Koalas: ${avgKoalas.toFixed(2)} điểm`);
+        console.log("Kết quả .....");
+        checkWinner(avgDolphins, avgKoalas);
+        console.log("--------------------");
+      };
+
+      runTest("Test Data 1", [44, 23, 71], [65, 54, 49]);
+      runTest("Test Data 2", [85, 54, 41], [23, 34, 27]);
+    </script>
+  </body>
+</html>

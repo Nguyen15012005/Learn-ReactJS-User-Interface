@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Dell XPS 13",
+    "price": 25000000,
+    "category": "Laptop",
+    "image": "images/laptop1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "iPhone 14 Pro",
+    "price": 28000000,
+    "category": "Điện thoại",
+    "image": "images/iphone14.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Samsung Galaxy S23",
+    "price": 22000000,
+    "category": "Điện thoại",
+    "image": "images/samsung.jpg"
+  },
+  {
+    "id": 4,
+    "name": "MacBook Air M2",
+    "price": 30000000,
+    "category": "Laptop",
+    "image": "images/macbook.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Tai nghe Sony WH-1000XM5",
+    "price": 8000000,
+    "category": "Phụ kiện",
+    "image": "images/headphone.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Chuột Logitech MX Master 3",
+    "price": 2500000,
+    "category": "Phụ kiện",
+    "image": "images/mouse.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bàn phím cơ Keychron K6",
+    "price": 3000000,
+    "category": "Phụ kiện",
+    "image": "images/keyboard.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Màn hình LG UltraWide",
+    "price": 12000000,
+    "category": "Màn hình",
+    "image": "images/monitor.jpg"
+  },
+  {
+    "id": 9,
+    "name": "iPad Pro 2022",
+    "price": 27000000,
+    "category": "Tablet",
+    "image": "images/ipad.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Apple Watch Series 8",
+    "price": 11000000,
+    "category": "Đồng hồ",
+    "image": "images/watch.jpg"
+  }
+]

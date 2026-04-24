@@ -1,0 +1,27 @@
+Build a `RecipeBoxPage` React component with Tailwind CSS — a user profile page for saved recipes.
+
+LAYOUT: Single column, max-w-5xl mx-auto px-6
+
+PROFILE HEADER:
+  - Breadcrumb: "Home > Your Recipe Box"
+  - Heading: "[Name]'s Recipe Box" (e.g., "Emma Gonzalez's Recipe Box")
+  - Left side: circular avatar (80px), right side bio text
+  - Bio: 3-4 lines of description text in gray
+  - "6.5k Subscribers" text (pink) + "Share →" button (pink outlined)
+
+TAB NAVIGATION:
+  - 3 tabs: "Saved Recipes" (active, pink underline) | "Folders" | "Recipes by [Name]"
+  - Tab bar with border-b border-gray-200
+
+RECIPE GRID:
+  - 4-column grid of RecipeCards
+  - Each card: image top, title below, time badge (e.g., "10 minutes"), bookmark icon top-right of image
+  - Cards have white bg, rounded-xl, shadow-sm
+
+PAGINATION:
+  - Page numbers with prev/next: 1 (active pink circle) 2 3 4 ... 10 11 ›
+
+FOOTER: Same dark footer as HomePage
+
+PROPS: user (object with name, avatar, bio, subscribers), recipes (array), activeTab
+TECH: React + Tailwind + useState for active tab

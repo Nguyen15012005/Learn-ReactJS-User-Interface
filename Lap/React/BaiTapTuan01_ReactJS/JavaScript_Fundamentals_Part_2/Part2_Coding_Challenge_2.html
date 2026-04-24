@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Nguyễn Nam Trung Nguyên" content="23640731" />
+
+    <title>Part 2 Coding Challenge 2</title>
+  </head>
+  <body>
+    <!-- 
+  Steven vẫn đang xây dựng công cụ tính tiền boa của mình, sử dụng các quy tắc như trước: 
+  Boa 15% tổng hóa đơn nếu giá trị hóa đơn nằm trong khoảng từ 50 đến 300, và nếu giá trị khác thì boa 20%.
+Nhiệm vụ của bạn:
+1. Viết một hàm 'calcTip' nhận giá trị hóa đơn bất kỳ làm đầu vào và trả về giá trị mong muốn.
+Tiền boa tương ứng, được tính toán dựa trên các quy tắc ở trên (bạn có thể xem mã từ thử thách tính
+tiền boa đầu tiên nếu cần). Sử dụng loại hàm bạn thích nhất. Kiểm tra hàm với giá trị hóa đơn
+là 100.
+2. Và bây giờ chúng ta hãy sử dụng mảng! Hãy tạo một mảng 'bills' chứa dữ liệu thử nghiệm.
+3. Tạo một mảng 'tips' chứa giá trị tiền boa cho mỗi hóa đơn, được tính toán từ hàm bạn đã tạo trước đó.
+4. Phần thưởng: Tạo một mảng 'total' chứa tổng giá trị, bao gồm hóa đơn và tiền boa.
+Dữ liệu thử nghiệm: 125, 555 và 44
+Gợi ý: Hãy nhớ rằng mảng cần một giá trị ở mỗi vị trí, và giá trị đó thực chất có thể là giá trị trả
+về của một hàm! Vì vậy, bạn chỉ cần gọi hàm bằng các giá trị của mảng (vì vậy đừng lưu các giá trị đầu
+vào vào các biến riêng biệt trước, mà hãy lưu trực tiếp vào mảng mới).
+  -->
+
+    <script>
+      const bills = [125, 555, 44];
+
+      const calcTip = (bill) =>
+        bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+      console.log(`Check hàm: ${calcTip(100)}`);
+
+      const tips = bills.map((bill) => calcTip(bill));
+
+      const totals = bills.map((bill, i) => bill + tips[i]);
+
+      console.log("Danh sách Bill: ", bills);
+      console.log("Danh sách Tip: ", tips);
+      console.log("Danh sách Total :", totals);
+    </script>
+  </body>
+</html>

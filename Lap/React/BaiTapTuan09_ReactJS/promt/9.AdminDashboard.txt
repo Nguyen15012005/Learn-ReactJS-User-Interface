@@ -1,0 +1,28 @@
+Build an `AdminDashboard` React component with Tailwind CSS (separate from Chefify — a generic SaaS admin panel).
+
+LAYOUT: 2-panel, full screen height
+LEFT SIDEBAR (240px, white, border-r):
+  - Logo top: colorful dot icon + "Logo" text
+  - Nav items (icon + label, rounded-lg, active=bg-pink-500 text-white):
+    • Dashboard (active) | Projects | Teams | Analytics | Messages | Integrations
+  - Bottom card: illustration image + "V2.0 is available" heading + "Try now" outlined button
+
+MAIN CONTENT (flex-1, bg-gray-50):
+  TOP BAR: "Dashboard" heading pink text-2xl + search input (center, rounded-full) + bell icon + question mark icon + avatar
+
+  OVERVIEW SECTION:
+  - "Overview" heading with grid icon
+  - 3 stat cards in a row:
+    • "Turnover" — $92,405 — +5.39% (green up arrow) — pink bg-pink-50, shopping cart icon
+    • "Profit" — $32,218 — +5.39% — blue bg-blue-50, dollar icon  
+    • "New customer" — 298 — +6.84% — blue bg-blue-50, person icon
+  - Each card: rounded-xl, white bg, p-6, flex justify-between
+
+  DETAILED REPORT TABLE:
+  - Header: "Detailed Report" with file icon + Import / Export buttons (pink outline)
+  - Table with columns: checkbox | CUSTOMER NAME (avatar+name) | COMPANY | ORDER VALUE | ORDER DATE | STATUS | edit icon
+  - 6 rows of sample data
+  - Status badges: "New" (blue), "In-progress" (yellow/amber), "Completed" (green) — rounded-full pill
+  - Bottom: "63 results" + pagination
+
+TECH: React + Tailwind, static data, no external lib

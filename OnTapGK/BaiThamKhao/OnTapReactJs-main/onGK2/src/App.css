@@ -1,0 +1,19 @@
+.card {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  list-style: none;
+  border-radius: 20px;
+}
+.card:hover {
+  transform: scale(0.95);
+  animation: ease-in;
+}
+img {
+  width: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}

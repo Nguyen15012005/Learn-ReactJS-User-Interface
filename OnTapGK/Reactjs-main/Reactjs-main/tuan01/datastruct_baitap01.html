@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Betting App</title>
+</head>
+<body>
+
+    <h2>Football Betting Challenge</h2>
+    <button id="btn">Cal Stats</button>
+
+    <script>
+        const game = {
+            team1: 'Bayern Munich',
+            team2: 'Borrussia Dortmund',
+            players: [
+                ['Neuer', 'Pavard', 'Martinez', 'Alaba', 'Davies', 'Kimmich', 'Goretzka', 'Coman', 'Muller', 'Gnarby', 'Lewandowski'],
+                ['Burki', 'Schulz', 'Hummels', 'Akanji', 'Hakimi', 'Weigl', 'Witsel', 'Hazard', 'Brandt', 'Sancho', 'Gotze'],
+            ],
+            score: '4:0',
+            scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+            date: 'Nov 9th, 2037',
+            odds: {
+                team1: 1.33,
+                x: 3.25,
+                team2: 6.5,
+            },
+        };
+
+        btn.onclick = () => {
+
+            const [players1, players2] = game.players;
+            console.log('Task 1 - Players 1:', players1);
+            console.log('Task 1 - Players 2:', players2);
+
+            // 2. Tách thủ môn (gk) và cầu thủ sân (fieldPlayers) của Bayern (Rest Pattern)
+            const [gk, ...fieldPlayers] = players1;
+            console.log('Task 2 - GK:', gk);
+            console.log('Task 2 - Field Players:', fieldPlayers);
+
+            // 3. Tạo mảng tất cả cầu thủ (Spread Operator)
+            const allPlayers = [...players1, ...players2];
+            console.log('Task 3 - All Players:', allPlayers);
+
+            // 4. Thêm cầu thủ dự bị vào Team 1
+            const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+            console.log('Task 4 - Team 1 Final:', players1Final);
+
+            // 5. Tạo biến cho các tỉ lệ cược (Nested Destructuring)
+            const { odds: { team1, x: draw, team2 } } = game;
+            console.log(`Task 5 - Odds: Team1 (${team1}), Draw (${draw}), Team2 (${team2})`);
+
+            // 6. Hàm printGoals (Rest Parameters)
+            const printGoals = function (...players) {
+                console.log('Task 6 - Goals scored by:');
+                for (const player of players) {
+                    console.log(`- ${player}`);
+                }
+                console.log(`Total goals: ${players.length}`);
+            };
+            
+            // Chạy thử hàm với dữ liệu yêu cầu
+            printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+            printGoals(...game.scored);
+
+            // 7. In đội có khả năng thắng cao hơn (Sử dụng Short-circuiting)
+            // Tỉ lệ cược thấp hơn = khả năng thắng cao hơn
+            console.log('Task 7 - Winner prediction:');
+            team1 < team2 && console.log('Team 1 is more likely to win');
+            team1 > team2 && console.log('Team 2 is more likely to win');
+        }
+    </script>
+    
+</body>
+</html>

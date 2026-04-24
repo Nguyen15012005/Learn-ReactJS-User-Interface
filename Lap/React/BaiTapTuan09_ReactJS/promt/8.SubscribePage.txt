@@ -1,0 +1,35 @@
+Build a `SubscribePage` React component with Tailwind CSS.
+
+BREADCRUMB: "Recipes > Subscribe"
+
+TOP SECTION — 2 column:
+  LEFT (text):
+    - Small label: "This recipe is exclusively available to subscribers"
+    - Heading pink: "Join now to access effortless, hassle-free recipes" text-2xl font-bold
+    - Feature list with yellow circle bullet icons:
+      • "20,000+ recipes to suit all tastes and skill levels"
+      • "Filter for diets, cook times, and more"
+      • "Personal Recipe Box for favorites"
+      • "Gain exclusive access to our subscriber-only mobile app"
+    - Price: "0.25USD / Week" bold, text-xl
+    - Subtext: "Billed as $1 every 4 weeks for the first year"
+    - "Subscribe Now" full-width pink button with bookmark icon
+    - "Cancel or Pause anytime" gray link below
+
+  RIGHT: large food image placeholder rounded-xl
+
+MIDDLE SECTION — "An All Access subscription includes":
+  - 4 equal columns: Cooking | Wirecutter | Games | The Athletic
+  - Each: icon + title bold + 2-line description gray
+  - bg-gray-50 rounded-2xl py-8 px-4
+
+BOTTOM SECTION — "Subscribe to Chefify Cooking only":
+  - Centered heading + subtitle
+  - 2 radio buttons styled as pill cards:
+    ○ "$2/month (Billed every 4 weeks)"
+    ○ "$20/year (Billed one annually)"
+  - "Subscribe Now" pink button centered
+  - "Cancel or Pause anytime" link
+
+FOOTER: Same dark Chefify footer
+TECH: React + Tailwind + useState for selected plan

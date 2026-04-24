@@ -1,0 +1,29 @@
+Build a `RecipeDetailPage` React component with Tailwind CSS.
+
+LAYOUT: max-w-4xl mx-auto px-6, top area is 2-column (content left, large image right)
+
+LEFT TOP:
+  - Title: "How to make a Strawberry Shortcake" — text-3xl font-bold
+  - Author row: avatar circle + "Genevieve Kim" + follow button
+  - Meta row: tabs "Ingredients" | "Tools" | "Steps" (pill tabs, active=pink bg)
+  - Ingredient list in a bordered card:
+    - Serving selector (- 2 +) on right
+    - List items: checkbox + ingredient name + amount on right
+  - "Add all to cart" pink full-width button
+
+RIGHT TOP:
+  - Main recipe image: https://placehold.co/520x400, rounded-xl
+
+STEPS SECTION (full width below):
+  - "Steps" heading
+  - Each step: bold "Step N" label + paragraph description + optional image (alternating left/right, placehold.co 400x280)
+  - Steps visually separated with dividers
+
+COMMENTS SECTION:
+  - "Looking more" heading + tab bar: comments tab (active) | other tabs
+  - Textarea for new comment + "Send" pink button
+  - List of 3 comments: avatar + username + date + comment text
+
+FOOTER: Same dark Chefify footer
+
+TECH: React + Tailwind, useState for active ingredient/tool/steps tab and serving count

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Betting Challenge #2</title>
+</head>
+<body>
+
+    <h2>Football Betting - Part 2</h2>
+    <button id="btn">Cal Betting Stats</button>
+
+    <script>
+        const game = {
+            team1: 'Bayern Munich',
+            team2: 'Borrussia Dortmund',
+            players: [
+                ['Neuer', 'Pavard', 'Martinez', 'Alaba', 'Davies', 'Kimmich', 'Goretzka', 'Coman', 'Muller', 'Gnarby', 'Lewandowski'],
+                ['Burki', 'Schulz', 'Hummels', 'Akanji', 'Hakimi', 'Weigl', 'Witsel', 'Hazard', 'Brandt', 'Sancho', 'Gotze'],
+            ],
+            score: '4:0',
+            scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+            date: 'Nov 9th, 2037',
+            odds: {
+                team1: 1.33,
+                x: 3.25,
+                team2: 6.5,
+            },
+        };
+
+        btn.onclick = () => {
+            // 1. Lặp qua mảng game.scored và in tên cầu thủ cùng số thứ tự bàn thắng
+            console.log('--- Task 1: Goal Scorers ---');
+            // Sử dụng .entries() trên mảng để lấy cả index và value
+            for (const [i, player] of game.scored.entries()) {
+                console.log(`Goal ${i + 1}: ${player}`);
+            }
+
+            // 2. Tính tỉ lệ cược trung bình
+            console.log('--- Task 2: Average Odds ---');
+            const odds = Object.values(game.odds); // Lấy mảng các giá trị [1.33, 3.25, 6.5]
+            let average = 0;
+            for (const odd of odds) {
+                average += odd;
+            }
+            average /= odds.length;
+            console.log(`Average odd: ${average.toFixed(2)}`);
+
+            // 3. In 3 tỉ lệ cược theo định dạng yêu cầu (Lấy tên đội trực tiếp từ object)
+            console.log('--- Task 3: Formatted Odds ---');
+            // Object.entries(game.odds) trả về [ ['team1', 1.33], ['x', 3.25], ... ]
+            for (const [team, odd] of Object.entries(game.odds)) {
+                // Nếu key là 'x' thì là 'draw', ngược lại lấy tên từ game[team]
+                const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+                console.log(`Odd of ${teamStr}: ${odd}`);
+            }
+
+            // 4. Bonus: Tạo đối tượng 'scorers' (Tên cầu thủ: Số bàn thắng)
+            console.log('--- Task 4 (Bonus): Scorers Object ---');
+            const scorers = {};
+            for (const player of game.scored) {
+                // Nếu cầu thủ đã có trong object thì tăng 1, nếu chưa thì gán bằng 1
+                scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+            }
+            console.log(scorers);
+        }
+    </script>
+    
+</body>
+</html>

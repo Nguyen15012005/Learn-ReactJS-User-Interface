@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* layout */
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 3;
+  padding: 20px;
+}
+
+.right {
+  flex: 1;
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+/* login */
+.login-box {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* product */
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* cart */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* toast */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: black;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

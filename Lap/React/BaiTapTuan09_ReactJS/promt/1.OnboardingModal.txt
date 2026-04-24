@@ -1,0 +1,17 @@
+Build a React component called `OnboardingModal` using Tailwind CSS that renders a centered modal overlay on top of a blurred/darkened background.
+
+DESIGN SPECS:
+- White modal, rounded-2xl, max-w-lg, centered on screen with overlay backdrop
+- Title: "Discover Chefify" in bold pink (#E91E8C), text-3xl, text-center
+- Subtitle: gray text below title "Easy and delicious cooking instructions right here. Start exploring now!"
+- Image carousel: show one large food image (use placeholder: https://placehold.co/600x340), aspect-ratio ~16/9, rounded-xl, w-full
+- Dot indicators: 3 dots below image, first dot is pink, others gray, horizontally centered
+- "Next" button: full-width, bg-pink-500 hover:bg-pink-600, text-white, rounded-full, py-3, font-semibold
+- "Skip" text link: centered below button, text-pink-500, cursor-pointer
+- State: manage currentSlide (0-2), clicking Next increments slide, at slide 2 clicking Next closes modal
+
+COMPONENT BEHAVIOR:
+- Accept `onClose` prop
+- Export as default
+
+TECH: React functional component + useState + Tailwind CSS only (no external UI lib)

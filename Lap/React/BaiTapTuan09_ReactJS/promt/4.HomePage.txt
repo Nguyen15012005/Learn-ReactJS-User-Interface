@@ -1,0 +1,28 @@
+Build the `HomePage` React component for Chefify using Tailwind CSS. It sits below the Navbar.
+
+SECTION 1 — Hero Banner:
+  - Full-width background image (kitchen photo: https://placehold.co/1400x500) with dark overlay
+  - Floating card (white, rounded-2xl, shadow-lg, absolute left-10 top-20, w-72):
+    - Yellow pill label "Recipe of the day"
+    - Title "Salad Caprese" in pink, text-xl font-bold
+    - Description text 3 lines, gray
+    - Rating stars (4 stars)
+    - "Create recipe" pink button
+    - Footer: "Salad" category tag
+
+SECTION 2 — "This Summer Recipes":
+  - Section heading centered: "This Summer Recipes", subtitle "We have all your Independence Day sweets covered"
+  - Horizontal scroll row of 4 RecipeCard components (image, title, time badge like "10 min", bookmark icon)
+  - Recipe cards: rounded-xl overflow-hidden shadow-sm, image top, info below
+
+SECTION 3 — "Recipes With Videos":
+  - Same layout as Section 2 with heading "Recipes With Videos", subtitle "Cooking up Culinary Creations with Step-by-Step Videos"
+  - Cards have a play button overlay on image
+
+SECTION 4 — "Editor's Pick":
+  - Heading: "Editor's pick" + subtitle "Curated Culinary Delights: Hand-picked food titles by our finest editors"
+  - 2x2 grid of larger cards with author name + avatar below title
+
+FOOTER: dark bg-gray-900 text-white, 4 columns: About Us (with email input + Send button), Learn More links, Shop links, Recipes links. Bottom bar with Chefify logo + copyright + Terms links.
+
+TECH: React + Tailwind, all images use placehold.co
