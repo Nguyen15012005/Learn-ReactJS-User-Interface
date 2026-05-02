@@ -1,0 +1,42 @@
+npm create vite@latest 
+
+npm install tailwindcss @tailwindcss/vite
+
+### vite.config.js
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+### index.css
+@import "tailwindcss";
+
+###json server
+npm install -g json-server
+
+### start json server + them cau lenh nay vao package.json -> npm run json-server
+json-server --watch data/db.json --port 0731
+ 
+### react-redux 
+npm install react-redux @reduxjs/toolkit
+
+###Route
+npm install react-router-dom
+
+###Sau khi setup xong
+
+1. Test tailwin đã có chưa
+2. Tạo folder 
+    - components
+    - features
+    - hooks : nếu đề yêu càu custom hooks
+    - pages : 
+    - routes :
+
+3. Gắn redux 
+4. Cấu hình main.jsx
+bọc <provider><provider/>
