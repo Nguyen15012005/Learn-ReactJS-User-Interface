@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import CartModal from "../pages/CartModal";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="flex flex-row justify-between items-center border-2 border-gray-300 px-4 py-8">
+      <CartModal
+        isOpen={isOpen}
+        onClose={() => {
+          setIsOpen(false);
+        }}
+      />
       <div className="">
         <span className="text-5xl text-green-500 font-bold">
           E-commerce App
@@ -38,10 +46,12 @@ const Header = () => {
           >
             Orders
           </NavLink>
-          <button className="cursor-pointer bg-green-500 hover:bg-green-900 text-lg px-5 py-1 rounded-lg text-white">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="cursor-pointer bg-green-500 hover:bg-green-900 text-lg px-5 py-1 rounded-lg text-white"
+          >
             Cart
           </button>
-          
         </nav>
       </div>
     </div>

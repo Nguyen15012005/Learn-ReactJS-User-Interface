@@ -13,10 +13,26 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      console.log(state, action);
+      const prod = action.payload;
+
+      const existItem = state.items.find((x) => x.id === prod.id);
+
+      if (existItem) existItem.quantity++;
+      else {
+        state.items.push({ ...prod, quantity: 1 });
+      }
     },
     removeFromCart: (state, action) => {
-      console.log(state, action);
+      const id = action.payload;
+
+      const existItem = state.items.find((x) => x.id === id);
+
+      if (!existItem) return state;
+      if (existItem.quantity === 1)
+        state.items = state.items.filter((x) => x.id !== id);
+      else {
+        existItem.quantity--;
+      }
     },
   },
 });
