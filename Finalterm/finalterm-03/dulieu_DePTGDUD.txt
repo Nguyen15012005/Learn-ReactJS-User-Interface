@@ -1,0 +1,26 @@
+[
+  {
+    id: 1,
+    customer: "Nguyễn Văn An",
+    address: "TP.HCM",
+    phone: "0901234567",
+    product: "Tai nghe Bluetooth",
+    status: "pending"
+  },
+  {
+    id: 2,
+    customer: "Trần Thị Mai",
+    address: "Hà Nội",
+    phone: "0912345678",
+    product: "Bàn phím cơ",
+    status: "shipping"
+  },
+  {
+    id: 3,
+    customer: "Lê Minh Hoàng",
+    address: "Đà Nẵng",
+    phone: "0988888888",
+    product: "Chuột gaming",
+    status: "delivered"
+  }
+]
